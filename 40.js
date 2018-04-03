@@ -1,0 +1,22 @@
+'use strict';
+
+class Person {
+  constructor(firstname, lastname) {
+    this.firstname = firstname;
+    this.lastname = lastname;
+  }
+
+  greet() {
+    console.log(this.firstname + ':' + this.lastname);
+  }
+}
+
+const john = new Person('John', 'Doe');
+john.greet();
+
+const jane = new Person('Jane', 'Doe');
+jane.greet();
+
+console.log(john.__proto__);
+console.log(jane.__proto__);
+console.log(john.__proto__ === jane.__proto__);
